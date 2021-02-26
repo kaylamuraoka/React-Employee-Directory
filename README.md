@@ -22,3 +22,16 @@ This React-based app gives business professionals the ability to access non-sens
 ### Demo
 
 The following image is an example of the web application's functionality and appearance.
+
+## Table of Contents
+
+- [**Installation**](#installation)
+- [**Usage**](#usage)
+- [**License**](#license)
+- [**Contributing**](#contributing)
+- [**Questions**](#questions)
+
+
+
+
+
