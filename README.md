@@ -31,6 +31,19 @@ The following image is an example of the web application's functionality and app
 - [**Contributing**](#contributing)
 - [**Questions**](#questions)
 
+## Installation
+
+In the project directory, you can run:
+
+```
+npm start
+```
+
+This command runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any errors in the console.
 
 
 
