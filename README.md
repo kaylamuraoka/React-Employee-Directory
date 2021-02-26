@@ -15,4 +15,6 @@
 
 </p>
 
-This app utilizes an API to populate random users and then create a directory. Other users on the app can search for employees by "name" and also organize each field (Name, Email, DOB) in ascending or descending order.
+## Description
+
+This React-based app gives business professionals the ability to access non-sensitive data about their employees, and easily search, filter, and sort through their entire directory. For example, employers may search for specific employees via the search field, sort a field (Name, Email, DOB) in ascending or descending order. The employee directory is populated with randomly generated users via an API call to the [**Random User API**](https://randomuser.me/). This API simply generates random user data, including - a photo, title, name, gender, age, e-mail and mobile phone number.
