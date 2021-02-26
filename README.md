@@ -1,7 +1,6 @@
 # React Employee Directory
 
 <p align="center">
-<<<<<<< HEAD
   <a href="https://reactjs.org/">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
   </a>
@@ -13,8 +12,6 @@
   <a href="https://dashboard.heroku.com/">
   <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku">
 
-=======
->>>>>>> 6375b9277390f4b4d40ed5c7b5c6540f0e6e1b11
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT" />
   </a>
