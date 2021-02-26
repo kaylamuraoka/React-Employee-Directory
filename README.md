@@ -1,6 +1,10 @@
 # React Employee Directory
 
 <p align="center">
+  <a href="https://randomized-employee-directory.herokuapp.com/">Click Here To View Deployed Application</a>
+</p>
+
+<p align="center">
   <a href="https://reactjs.org/">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
   </a>
@@ -68,7 +72,7 @@ Carry out the following steps:
 
 ## Usage
 
-Click [**here**]() to view deployed application on Heroku.
+Click this [**link**](https://randomized-employee-directory.herokuapp.com/) to view the deployed "Employee Directory" application on Heroku.
 
 ## License
 
