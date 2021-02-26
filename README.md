@@ -44,17 +44,27 @@ The following image is an example of the web application's functionality and app
 
 ## Installation
 
-In the project directory, you can run:
+Carry out the following steps:
+
+1. Clone this [**project repository**](https://github.com/kaylamuraoka/React-Employee-Directory) locally. For steps on how to clone a repository using the command line, read this section of the Github Docs [**about cloning a repository**](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository#about-cloning-a-repository).
+
+2. Navigate to the project directory locally by the command `cd [local repository]`
+
+3. Check package.json file and ensure scripts are notated as below:
 
 ```
-npm start
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
 ```
 
-This command runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+4. Run the command `npm install`. Note: Make sure to delete the node_modules folder and any 'lock' files such as
+   yarn.lock or package-lock.json before running `npm install` if present.
 
-The page will reload if you make edits.
-You will also see any errors in the console.
+5. Now run `npm start` to run the app in the development mode.
 
 ## Usage
 
