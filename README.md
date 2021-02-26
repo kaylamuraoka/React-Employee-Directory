@@ -28,7 +28,7 @@
 
 ## Description
 
-This React-based app gives business professionals the ability to access non-sensitive data about their employees, and easily search, filter, and sort through their entire directory. For example, employers may search for specific employees via the search field, sort a field (Name, Email, DOB) in ascending or descending order. The employee directory is populated with randomly generated users via an API call to the [**Random User API**](https://randomuser.me/). This API simply generates random user data, including - a photo, title, name, gender, age, e-mail and mobile phone number.
+This React-based app gives business professionals the ability to access non-sensitive data about their employees, and easily search, filter, and sort through their entire directory. For example, employers may search for specific employees via the search field, sort a field (Name, Email, DOB) in ascending or descending order. The employee directory is populated with randomly generated users via an API call to the [**Random User API**](https://randomuser.me/). This API simply generates random user data, including - a photo, title, name, gender, age, e-mail and mobile phone number. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Demo
 
