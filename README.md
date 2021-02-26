@@ -49,5 +49,7 @@ You will also see any errors in the console.
 
 Click [**here**]() to view deployed application on Heroku.
 
+## License
 
+This project is licensed under the [**MIT**](https://opensource.org/licenses/MIT) license.
 
