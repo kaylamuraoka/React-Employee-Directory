@@ -1,34 +1,48 @@
-.banner {
-  height: 500px;
-  background-size: cover;
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat&display=swap");
+
+.banner-image {
+  height: 400px;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 
-.banner::after {
-  content: "";
-  display: block;
-  opacity: 0.4;
+.banner-text {
+  text-align: center;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: black;
-}
-
-.banner * {
-  position: relative;
-  z-index: 2;
-}
-
-.banner h1,
-.banner h2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
 }
 
-.banner h1 {
-  font-size: 60px;
-  padding-top: 140px;
-  margin-top: 0;
+.banner-text h1 {
+  font-family: "Chewy", cursive;
+  font-size: 50px;
+}
+
+.banner-text p {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.banner-text button {
+  font-family: "Chewy", cursive;
+  font-weight: 20px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 29px;
+  color: #ddd;
+  background-color: #009879;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.banner-text button:hover {
+  color: white;
+  transform: scale(1.1);
 }
