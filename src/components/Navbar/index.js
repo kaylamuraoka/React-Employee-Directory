@@ -1,41 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-light bg-light">
-      <div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="/"
-              className={
-                window.location.pathname === "" ||
-                window.location.pathname === "/" ||
-                window.location.pathname === "/about"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              About
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link
-              to="/employee-directory"
-              className={
-                window.location.pathname === "/employee-directory"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Employee Directory
-            </Link>
-          </li>
-        </ul>
-      </div>
+    <nav className="topnav">
+      <a>
+        <NavLink to="/" activeClassName="active" exact={true}>
+          About
+        </NavLink>
+      </a>
+      <a>
+        <NavLink to="/employee-directory" activeClassName="active">
+          Employee Directory
+        </NavLink>
+      </a>
     </nav>
   );
 }
