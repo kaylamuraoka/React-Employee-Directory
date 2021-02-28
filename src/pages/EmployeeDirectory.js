@@ -1,27 +1,70 @@
-import React from "react";
+import React, { Component } from "react";
+import API from "../utils/API";
 import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
-import Table from "../components/Table";
+import PageHeader from "../components/PageHeader";
+import Table from "../components/EmployeesTable";
 
-function EmployeeDirectory() {
-  return (
-    <Container>
-      <h1 className="text-center">Employee Directory</h1>
-      <hr />
-      <p className="text-center">
-        This employee directory is populated with randomly generated users via
-        an API call to the Random User API. This API simply generates random
-        user data (shown below). You may search for specific employees via the
-        search field, sort a field (Name, Email, DOB) in ascending or descending
-        order.
-      </p>
-      <Row>
-        <Col size="col-12">
-          <Table />
-        </Col>
-      </Row>
-    </Container>
-  );
+class EmployeeDirectory extends Component {
+  state = {
+    employees: [],
+  };
+
+  // When this component mounts, search the Random User API
+  componentDidMount() {
+    this.getEmployees();
+  }
+
+  getEmployees = () => {
+    API.getEmployees()
+      .then((res) => {
+        const results = res.data.results;
+        const employeeArray = [];
+        for (let i = 0; i < results.length; i++) {
+          const row = {
+            picture: results[i].picture.medium,
+            name: `${results[i].name.first} ${results[i].name.last}`,
+            gender: results[i].gender,
+            age: results[i].dob.age,
+            phone: results[i].phone,
+            email: results[i].email,
+            address: `${results[i].location.street.number} ${results[i].location.street.name}. ${results[i].location.city}, ${results[i].location.state} ${results[i].location.postcode}`,
+          };
+          employeeArray.push(row);
+        }
+        console.log(employeeArray);
+
+        this.setState({
+          employees: employeeArray,
+        });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  render() {
+    return (
+      <div>
+        <PageHeader
+          backgroundImage="https://content.linkedin.com/content/dam/business/marketing-solutions/global/en_US/blog/2017/06/WorkplaceHeader.jpg"
+          title="Employee Directory"
+          subtitle="This employee directory is populated with randomly generated users via an API call to the Random User API. This API simply generates random user data (shown below)."
+        ></PageHeader>
+        <Container>
+          <Table
+            columns={[
+              "Picture",
+              "Name",
+              "Gender",
+              "Age",
+              "Phone",
+              "Email",
+              "Address",
+            ]}
+            employees={this.state.employees}
+          ></Table>
+        </Container>
+      </div>
+    );
+  }
 }
+
 export default EmployeeDirectory;
