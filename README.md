@@ -38,6 +38,14 @@ This React-based app gives business professionals the ability to access non-sens
 
 The following image is an example of the web application's functionality and appearance.
 
+#### About Page
+
+![About page screeenshot](images/about-page-screeenshot.png)
+
+#### Employee Directory Page
+
+![Employee Directory page screeenshot](images/employee-directory-page-screenshot.png)
+
 ## Table of Contents
 
 - [**Installation**](#installation)
