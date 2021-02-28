@@ -1,13 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root,
-#root > div,
-div[data-reactroot] {
-  height: 100%;
+body {
   padding: 0;
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
