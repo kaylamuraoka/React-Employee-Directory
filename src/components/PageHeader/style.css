@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat&display=swap");
 
 .hero-image {
-  height: 350px;
+  height: 400px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,4 +25,49 @@
 .hero-text p {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+}
+
+.hero-text button {
+  font-family: "Chewy", cursive;
+  font-weight: 20px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 29px;
+  color: #ddd;
+  background-color: #009879;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero-text button:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-top: 7px;
+  min-height: 20px;
+  min-width: 50px;
+  font-size: 27px;
+}
+
+.input-field {
+  width: 100%;
+  font-size: 16px;
+  padding: 9px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  text-align: center;
 }
