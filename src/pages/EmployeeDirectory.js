@@ -44,7 +44,7 @@ class EmployeeDirectory extends Component {
     return (
       <div>
         <PageHeader
-          backgroundImage="https://content.linkedin.com/content/dam/business/marketing-solutions/global/en_US/blog/2017/06/WorkplaceHeader.jpg"
+          backgroundImage="http://washingtongrantmakers.com/sites/default/files/corporate-training-programs-for-employees-blog-background-image.jpg"
           title="Employee Directory"
           subtitle="This employee directory is populated with randomly generated users via an API call to the Random User API. This API simply generates random user data (shown below)."
         ></PageHeader>
