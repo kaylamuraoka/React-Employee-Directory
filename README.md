@@ -36,7 +36,8 @@ This React-based app gives business professionals the ability to access non-sens
 
 ### Demo
 
-The following image is an example of the web application's functionality and appearance.
+The following gif and images are examples of the web application's functionality and appearance.
+![Demo Gif](images/EmployeeDirectoryReactAppDemoGif.gif)
 
 #### About Page
 
