@@ -1,10 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+  margin-top: 7px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.input-field {
+  vertical-align: center;
+  width: 100%;
+  max-width: 150px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding-left: 35px;
+  text-align: left;
+}
 
 /* Styling the table */
 table {
-  font-family: "Roboto", sans-serif;
+  font-family: "Acme", sans-serif;
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
@@ -16,17 +43,24 @@ table thead tr {
   background-color: #009879;
   color: #ffffff;
   text-align: left;
+  cursor: pointer;
+}
+.sort-icon {
+  margin-left: 3px;
 }
 
 /* Styling the table cells */
 table th,
 table td {
   padding: 12px 15px;
-  text-transform: capitalize;
 }
 
 table tbody tr {
   border-bottom: 1px solid #dddddd;
+}
+
+.index-column {
+  font-weight: bolder;
 }
 
 table tbody tr:nth-of-type(even) {
@@ -35,4 +69,85 @@ table tbody tr:nth-of-type(even) {
 
 table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
+}
+
+img {
+  border-radius: 50px;
+}
+
+.button-area {
+  margin: 5px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Styling for button */
+.button-icon {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+button.icon-button {
+  height: 35px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: white;
+  color: grey;
+  text-transform: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+}
+
+/* Dropdown button */
+.dropdown .dropdown-button {
+  height: 35px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: white;
+  color: grey;
+  text-transform: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+  list-style: none;
+  margin-left: none;
+  padding: 5px 5px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
