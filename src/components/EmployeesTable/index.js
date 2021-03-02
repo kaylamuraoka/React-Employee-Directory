@@ -129,7 +129,8 @@ function EmployeesTable(props) {
           </tr>
         </thead>
 
-        {props.matchedEmployees.length > 0 ? (
+        {props.matchedEmployees.length > 0 &&
+        props.matchedEmployees.length < 20 ? (
           <tbody>
             {props.matchedEmployees.map((employee, index) => (
               <tr key={"row-" + index}>

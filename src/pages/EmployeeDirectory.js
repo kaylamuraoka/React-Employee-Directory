@@ -43,6 +43,8 @@ class EmployeeDirectory extends Component {
 
         this.setState({
           employees: employeeArray,
+          search: "",
+          matchedEmployees: [],
         });
       })
       .catch((err) => console.log(err));
@@ -60,8 +62,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.name > b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         nameSort: "descending",
       });
     } else {
@@ -75,8 +87,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         nameSort: "ascending",
       });
     }
@@ -94,8 +116,19 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.gender > b.gender) {
+          return -1;
+        }
+        if (a.gender < b.gender) {
+          return 1;
+        }
+        return 0;
+      });
+
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         genderSort: "descending",
       });
     } else {
@@ -109,8 +142,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.gender < b.gender) {
+          return -1;
+        }
+        if (a.gender > b.gender) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         genderSort: "ascending",
       });
     }
@@ -120,15 +163,23 @@ class EmployeeDirectory extends Component {
     if (this.state.ageSort === "ascending") {
       console.log("descending age sort clicked");
       let employees = this.state.employees.sort((a, b) => b.age - a.age);
+      let matchedEmployees = this.state.matchedEmployees.sort(
+        (a, b) => b.age - a.age
+      );
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         ageSort: "descending",
       });
     } else {
       console.log("ascending age sort clicked");
       let employees = this.state.employees.sort((a, b) => a.age - b.age);
+      let matchedEmployees = this.state.matchedEmployees.sort(
+        (a, b) => a.age - b.age
+      );
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         ageSort: "ascending",
       });
     }
@@ -140,8 +191,12 @@ class EmployeeDirectory extends Component {
       let employees = this.state.employees.sort(
         (a, b) => b.phone.replace(/[()-]/g, "") - a.phone.replace(/[()-]/g, "")
       );
+      let matchedEmployees = this.state.matchedEmployees.sort(
+        (a, b) => b.phone.replace(/[()-]/g, "") - a.phone.replace(/[()-]/g, "")
+      );
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         phoneSort: "descending",
       });
     } else {
@@ -149,8 +204,12 @@ class EmployeeDirectory extends Component {
       let employees = this.state.employees.sort(
         (a, b) => a.phone.replace(/[()-]/g, "") - b.phone.replace(/[()-]/g, "")
       );
+      let matchedEmployees = this.state.matchedEmployees.sort(
+        (a, b) => a.phone.replace(/[()-]/g, "") - b.phone.replace(/[()-]/g, "")
+      );
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         phoneSort: "ascending",
       });
     }
@@ -168,8 +227,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.email > b.email) {
+          return -1;
+        }
+        if (a.email < b.email) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         emailSort: "descending",
       });
     } else {
@@ -183,8 +252,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.email < b.email) {
+          return -1;
+        }
+        if (a.email > b.email) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         emailSort: "ascending",
       });
     }
@@ -202,8 +281,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.address > b.address) {
+          return -1;
+        }
+        if (a.address < b.address) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         addressSort: "descending",
       });
     } else {
@@ -217,8 +306,18 @@ class EmployeeDirectory extends Component {
         }
         return 0;
       });
+      let matchedEmployees = this.state.matchedEmployees.sort((a, b) => {
+        if (a.address < b.address) {
+          return -1;
+        }
+        if (a.address > b.address) {
+          return 1;
+        }
+        return 0;
+      });
       this.setState({
         employees: employees,
+        matchedEmployees: matchedEmployees,
         addressSort: "ascending",
       });
     }
@@ -234,6 +333,8 @@ class EmployeeDirectory extends Component {
       console.log(maleEmployees);
       this.setState({
         employees: maleEmployees,
+        matchedEmployees: [],
+        search: "",
       });
     }
     let maleEmployees = this.state.employees.filter(
@@ -242,6 +343,8 @@ class EmployeeDirectory extends Component {
     console.log(maleEmployees);
     this.setState({
       employees: maleEmployees,
+      matchedEmployees: [],
+      search: "",
     });
   };
 
@@ -256,6 +359,8 @@ class EmployeeDirectory extends Component {
       console.log(femaleEmployees);
       this.setState({
         employees: femaleEmployees,
+        matchedEmployees: [],
+        search: "",
       });
     }
     femaleEmployees = this.state.employees.filter(
@@ -264,6 +369,8 @@ class EmployeeDirectory extends Component {
     console.log(femaleEmployees);
     this.setState({
       employees: femaleEmployees,
+      matchedEmployees: [],
+      search: "",
     });
   };
 
@@ -302,6 +409,10 @@ class EmployeeDirectory extends Component {
   refreshTable = () => {
     console.log("Employee Directory has been refreshed");
     this.getEmployees();
+    this.setState({
+      search: "",
+      matchedEmployees: [],
+    });
   };
 
   render() {
